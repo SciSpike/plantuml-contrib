@@ -1,0 +1,29 @@
+' Coad Domain Neutral Component Archetypes
+
+' Description
+skinparam class {
+  BackgroundColor<<Description>> APPLICATION
+  BorderColor<<Description>> Navy
+}
+skinparam stereotypeCBackgroundColor<<Description>> SlateBlue
+
+' PartyPlaceThing
+skinparam class {
+  BackgroundColor<<PartyPlaceThing>> TECHNOLOGY
+  BorderColor<<PartyPlaceThing>> Black
+}
+skinparam stereotypeCBackgroundColor<<PartyPlaceThing>> DarkSeaGreen
+
+' Role
+skinparam class {
+  BackgroundColor<<Role>> Khaki
+  BorderColor<<Role>> DarkGoldenRod
+}
+skinparam stereotypeCBackgroundColor<<Role>> GoldenRod
+
+' MomentInterval
+skinparam class {
+  BackgroundColor<<MomentInterval>> IMPLEMENTATION
+  BorderColor<<MomentInterval>> DarkRed
+}
+skinparam stereotypeCBackgroundColor<<MomentInterval>> HotPink

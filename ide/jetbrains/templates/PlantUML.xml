@@ -269,7 +269,7 @@
       <option name="XML" value="false" />
     </context>
   </template>
-  <template name="bold" value="&lt;b&gt;$SELECTION$&lt;/b&gt;$END$" description="Embolden" toReformat="true" toShortenFQNames="true">
+  <template name="bold" value="**$SELECTION$**$END$" description="Embolden" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="Bash" value="false" />
       <option name="CSS" value="false" />
@@ -490,7 +490,7 @@
       <option name="XML" value="false" />
     </context>
   </template>
-  <template name="img" value="&lt;img src=&quot;$SELECTION$&quot;&gt;&lt;/img&gt;$END$" description="Image" toReformat="true" toShortenFQNames="true">
+  <template name="img" value="&lt;img:$SELECTION$&gt;$END$" description="Image" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="Bash" value="false" />
       <option name="CSS" value="false" />
@@ -554,7 +554,7 @@
       <option name="XML" value="false" />
     </context>
   </template>
-  <template name="italic" value="&lt;i&gt;$SELECTION$&lt;/i&gt;$END$" description="Italicize" toReformat="true" toShortenFQNames="true">
+  <template name="italic" value="//$SELECTION$//$END$" description="Italicize" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="Bash" value="false" />
       <option name="CSS" value="false" />
@@ -685,8 +685,9 @@
       <option name="XML" value="false" />
     </context>
   </template>
-  <template name="notemultiline" value="note as Note$ID$&#10;  $SELECTION$&#10;end note$END$" description="Note with multiple lines" toReformat="true" toShortenFQNames="true">
+  <template name="notemultiline" value="note as Note$ID$&#10;  $SELECTION$&#10;end note&#10;Note$ID$ .. $T$$END$" description="Note with multiple lines" toReformat="true" toShortenFQNames="true">
     <variable name="ID" expression="date(&quot;yyyyMMddhhmmss&quot;)" defaultValue="" alwaysStopAt="false" />
+    <variable name="T" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Bash" value="false" />
       <option name="CSS" value="false" />
@@ -818,7 +819,7 @@
       <option name="XML" value="false" />
     </context>
   </template>
-  <template name="strikethrough" value="&lt;s&gt;$SELECTION$&lt;/s&gt;$END$" description="Strikethrough" toReformat="true" toShortenFQNames="true">
+  <template name="strikethrough" value="--$SELECTION$--$END$" description="Strikethrough" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="Bash" value="false" />
       <option name="CSS" value="false" />
@@ -838,7 +839,7 @@
       <option name="XML" value="false" />
     </context>
   </template>
-  <template name="underline" value="&lt;u&gt;$SELECTION$&lt;/u&gt;$END$" description="Underline" toReformat="true" toShortenFQNames="true">
+  <template name="underline" value="__$SELECTION$__$END$" description="Underline" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="Bash" value="false" />
       <option name="CSS" value="false" />
@@ -884,6 +885,147 @@
     <variable name="N" expression="" defaultValue="&quot;methodName&quot;" alwaysStopAt="true" />
     <variable name="ARGLIST" expression="" defaultValue="&quot;name: Type, ...&quot;" alwaysStopAt="true" />
     <variable name="T" expression="" defaultValue="&quot;: Type&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Bash" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="DART" value="false" />
+      <option name="HAML" value="false" />
+      <option name="HTML" value="false" />
+      <option name="Handlebars" value="false" />
+      <option name="JADE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="JSP" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="TypeScript" value="false" />
+      <option name="Vue" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="&lt;&lt;stereotype" value="&lt;&lt;$N$&gt;&gt;$END$" description="Stereotype" toReformat="false" toShortenFQNames="true">
+    <variable name="N" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Bash" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="DART" value="false" />
+      <option name="HAML" value="false" />
+      <option name="HTML" value="false" />
+      <option name="Handlebars" value="false" />
+      <option name="JADE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="JSP" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="TypeScript" value="false" />
+      <option name="Vue" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="monospace" value="&quot;&quot;$SELECTION$&quot;&quot;$END$" description="Monospace" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="Bash" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="DART" value="false" />
+      <option name="HAML" value="false" />
+      <option name="HTML" value="false" />
+      <option name="Handlebars" value="false" />
+      <option name="JADE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="JSP" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="TypeScript" value="false" />
+      <option name="Vue" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="underlinewavy" value="~~$SELECTION$~~$END$" description="Wavy underline" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="Bash" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="DART" value="false" />
+      <option name="HAML" value="false" />
+      <option name="HTML" value="false" />
+      <option name="Handlebars" value="false" />
+      <option name="JADE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="JSP" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="TypeScript" value="false" />
+      <option name="Vue" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="h1" value="= $SELECTION$$END$" description="Heading 1" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="Bash" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="DART" value="false" />
+      <option name="HAML" value="false" />
+      <option name="HTML" value="false" />
+      <option name="Handlebars" value="false" />
+      <option name="JADE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="JSP" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="TypeScript" value="false" />
+      <option name="Vue" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="h2" value="== $SELECTION$$END$" description="Heading 2" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="Bash" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="DART" value="false" />
+      <option name="HAML" value="false" />
+      <option name="HTML" value="false" />
+      <option name="Handlebars" value="false" />
+      <option name="JADE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="JSP" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="TypeScript" value="false" />
+      <option name="Vue" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="h3" value="=== $SELECTION$$END$" description="Heading 3" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="Bash" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="DART" value="false" />
+      <option name="HAML" value="false" />
+      <option name="HTML" value="false" />
+      <option name="Handlebars" value="false" />
+      <option name="JADE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="JSP" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="TypeScript" value="false" />
+      <option name="Vue" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="h4" value="==== $SELECTION$$END$" description="Heading 4" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="Bash" value="false" />
       <option name="CSS" value="false" />
