@@ -1,0 +1,13 @@
+' Entity
+skinparam class {
+BackgroundColor<<Entity>> Moccasin
+BorderColor<<Entity>> DarkGoldenRod
+}
+skinparam stereotypeCBackgroundColor<<Entity>> Gold
+
+' ValueObject, AKA Embeddable (has no identity)
+skinparam class {
+BackgroundColor<<ValueObject>> LightGrey
+BorderColor<<ValueObject>> Black
+}
+skinparam stereotypeCBackgroundColor<<ValueObject>> LightGrey

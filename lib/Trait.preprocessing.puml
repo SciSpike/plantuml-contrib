@@ -1,0 +1,2 @@
+!define trait(t) class t <<(T,#dddddd) Trait>>
+!define expresses(trait) ..|> trait

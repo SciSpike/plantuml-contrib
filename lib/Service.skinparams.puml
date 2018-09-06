@@ -1,0 +1,6 @@
+' DataTransferObject
+skinparam class {
+BackgroundColor<<ValueObject>> LightSeaGreen
+BorderColor<<ValueObject>> DarkGreen
+}
+skinparam stereotypeCBackgroundColor<<ValueObject>> SpringGreen

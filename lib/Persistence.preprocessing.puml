@@ -1,0 +1,2 @@
+!define valueObject(t) class t <<(V,#dddddd) ValueObject>>
+!define entity(t) class t <<(P,#dddddd) Entity>>
